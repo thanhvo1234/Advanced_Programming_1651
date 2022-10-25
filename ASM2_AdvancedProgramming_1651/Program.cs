@@ -93,7 +93,9 @@ void Main()
                 showRoom.RemoveCarByModel(model);
                 break;
             case 6:
-                
+                int id = int.Parse(Console.ReadLine());
+                Console.WriteLine(showRoom.UpdateCarById(id));
+                break;
             case 0:
                 return;
             default:

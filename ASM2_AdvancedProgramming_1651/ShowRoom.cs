@@ -80,5 +80,23 @@ namespace ASM2_AdvancedProgramming_1651
             }
             return result;
         }
+        public bool UpdateCarById(int id)
+        {
+            Car car = CarList.FirstOrDefault(i => i.Id == id);
+            if (car != null)
+            {
+                Console.Write("=> Enter brand: ");
+                car.Brand = Console.ReadLine();
+                Console.Write("=> Enter model: ");
+                car.Model = Console.ReadLine();
+                Console.Write("=> Enter price: ");
+                car.Price = double.Parse(Console.ReadLine());
+                Console.WriteLine("(^.^) Update successfully!");
+                return true;
+
+            }
+
+            return false;
+        }
     }
 }
